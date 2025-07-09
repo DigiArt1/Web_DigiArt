@@ -147,13 +147,75 @@
 /* Sección Nosotros */
 .seccion-nosotros {
     padding: 100px 0;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Esferas decorativas para la sección Nosotros */
+.seccion-nosotros::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(46, 49, 146, 0.3) 0%, rgba(46, 49, 146, 0.15) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 20s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 40px rgba(46, 49, 146, 0.2);
+}
+
+.seccion-nosotros::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.25) 0%, rgba(237, 46, 139, 0.12) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 15s ease-in-out infinite reverse;
+    z-index: 1;
+    box-shadow: 0 0 60px rgba(237, 46, 139, 0.15);
+}
+
+/* Esferas adicionales para Nosotros */
+.seccion-nosotros .esfera-decorativa-1 {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.35) 0%, rgba(0, 167, 157, 0.18) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 12s ease-in-out infinite, pulsarVerde 4s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 30px rgba(0, 167, 157, 0.25);
+    border: 2px solid rgba(0, 167, 157, 0.2);
+}
+
+.seccion-nosotros .esfera-decorativa-2 {
+    position: absolute;
+    top: 70%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 215, 0, 0.2) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 18s ease-in-out infinite, pulsarAmarillo 6s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+    border: 2px solid rgba(255, 215, 0, 0.3);
 }
 
 .contenedor {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .titulo-seccion {
@@ -282,7 +344,201 @@
 /* Sección Servicios */
 .seccion-servicios {
     padding: 100px 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 20%, #00A79D 60%, #1cbeb3 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Esferas decorativas para la sección Servicios */
+.seccion-servicios::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 10%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.4) 0%, rgba(237, 46, 139, 0.2) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 25s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 50px rgba(237, 46, 139, 0.3);
+}
+
+.seccion-servicios::after {
+    content: '';
+    position: absolute;
+    bottom: -120px;
+    right: 15%;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.12) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 30s ease-in-out infinite reverse;
+    z-index: 1;
+    box-shadow: 0 0 70px rgba(255, 255, 255, 0.2);
+}
+
+/* Esferas adicionales para Servicios */
+.seccion-servicios .esfera-decorativa-3 {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.5) 0%, rgba(255, 215, 0, 0.25) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 16s ease-in-out infinite, pulsarAmarillo 5s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+    border: 3px solid rgba(255, 215, 0, 0.4);
+}
+
+.seccion-servicios .esfera-decorativa-4 {
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 22s ease-in-out infinite, pulsar 7s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.seccion-servicios .esfera-decorativa-5 {
+    position: absolute;
+    bottom: 30%;
+    right: 25%;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.6) 0%, rgba(237, 46, 139, 0.3) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 14s ease-in-out infinite reverse, pulsarRosa 3s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(237, 46, 139, 0.4);
+    border: 2px solid rgba(237, 46, 139, 0.5);
+}
+
+/* Animaciones para las esferas */
+@keyframes flotarLento {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        filter: blur(0px);
+    }
+    25% {
+        transform: translate(30px, -20px) rotate(90deg) scale(1.1);
+        filter: blur(1px);
+    }
+    50% {
+        transform: translate(-20px, -40px) rotate(180deg) scale(0.9);
+        filter: blur(0px);
+    }
+    75% {
+        transform: translate(-40px, 20px) rotate(270deg) scale(1.05);
+        filter: blur(1px);
+    }
+}
+
+@keyframes flotarMedio {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    33% {
+        transform: translate(40px, -30px) rotate(120deg) scale(1.15);
+        opacity: 0.8;
+    }
+    66% {
+        transform: translate(-30px, -50px) rotate(240deg) scale(0.85);
+        opacity: 1;
+    }
+}
+
+@keyframes flotarRapido {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translate(25px, -15px) rotate(72deg) scale(1.1);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translate(-15px, -35px) rotate(144deg) scale(0.9);
+        opacity: 1;
+    }
+    60% {
+        transform: translate(-35px, 10px) rotate(216deg) scale(1.2);
+        opacity: 0.8;
+    }
+    80% {
+        transform: translate(20px, 25px) rotate(288deg) scale(0.8);
+        opacity: 1;
+    }
+}
+
+/* Animaciones de pulsación específicas por color */
+@keyframes pulsar {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+    }
+    50% {
+        filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6));
+    }
+}
+
+@keyframes pulsarAzul {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 15px rgba(46, 49, 146, 0.4));
+    }
+    50% {
+        filter: brightness(1.3) drop-shadow(0 0 30px rgba(46, 49, 146, 0.7));
+    }
+}
+
+@keyframes pulsarRosa {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 15px rgba(237, 46, 139, 0.4));
+    }
+    50% {
+        filter: brightness(1.3) drop-shadow(0 0 30px rgba(237, 46, 139, 0.7));
+    }
+}
+
+@keyframes pulsarVerde {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 15px rgba(0, 167, 157, 0.4));
+    }
+    50% {
+        filter: brightness(1.3) drop-shadow(0 0 30px rgba(0, 167, 157, 0.7));
+    }
+}
+
+@keyframes pulsarAmarillo {
+    0%, 100% {
+        filter: brightness(1) drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+    }
+    50% {
+        filter: brightness(1.3) drop-shadow(0 0 30px rgba(255, 215, 0, 0.7));
+    }
+}
+
+/* Ajustar el contenedor para que esté por encima de las esferas */
+.seccion-servicios .contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+/* Ajustar el título de servicios para mejor contraste */
+.seccion-servicios .titulo-seccion {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-servicios .titulo-seccion::after {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .grid-servicios {
@@ -417,6 +673,22 @@
     .grid-servicios {
         grid-template-columns: repeat(2, 1fr);
     }
+    
+    /* Reducir tamaño de esferas en tablets */
+    .seccion-nosotros::before,
+    .seccion-nosotros::after,
+    .seccion-servicios::before,
+    .seccion-servicios::after {
+        transform: scale(0.8);
+    }
+    
+    .seccion-nosotros .esfera-decorativa-1,
+    .seccion-nosotros .esfera-decorativa-2,
+    .seccion-servicios .esfera-decorativa-3,
+    .seccion-servicios .esfera-decorativa-4,
+    .seccion-servicios .esfera-decorativa-5 {
+        transform: scale(0.7);
+    }
 }
 
 /* Responsive para móviles */
@@ -432,6 +704,26 @@
 
     .servicio {
         padding: 30px 20px;
+    }
+    
+    /* Ocultar algunas esferas en móviles para mejor rendimiento */
+    .seccion-nosotros .esfera-decorativa-2,
+    .seccion-servicios .esfera-decorativa-4,
+    .seccion-servicios .esfera-decorativa-5 {
+        display: none;
+    }
+    
+    /* Reducir más las esferas restantes */
+    .seccion-nosotros::before,
+    .seccion-nosotros::after,
+    .seccion-servicios::before,
+    .seccion-servicios::after {
+        transform: scale(0.6);
+    }
+    
+    .seccion-nosotros .esfera-decorativa-1,
+    .seccion-servicios .esfera-decorativa-3 {
+        transform: scale(0.5);
     }
 }
 
