@@ -727,5 +727,402 @@
     }
 }
 
+/* Sección Productos */
+.seccion-productos {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Esferas decorativas para la sección Productos */
+.seccion-productos::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: 10%;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.35) 0%, rgba(0, 167, 157, 0.18) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 28s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 45px rgba(0, 167, 157, 0.25);
+}
+
+.seccion-productos::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 5%;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, rgba(46, 49, 146, 0.3) 0%, rgba(46, 49, 146, 0.15) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 35s ease-in-out infinite reverse;
+    z-index: 1;
+    box-shadow: 0 0 55px rgba(46, 49, 146, 0.2);
+}
+
+/* Esferas adicionales para Productos */
+.seccion-productos .esfera-decorativa-6 {
+    position: absolute;
+    top: 25%;
+    left: 8%;
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.4) 0%, rgba(237, 46, 139, 0.2) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 18s ease-in-out infinite, pulsarRosa 5.5s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 35px rgba(237, 46, 139, 0.3);
+    border: 2px solid rgba(237, 46, 139, 0.25);
+}
+
+.seccion-productos .esfera-decorativa-7 {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+    width: 90px;
+    height: 90px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.45) 0%, rgba(255, 215, 0, 0.23) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 20s ease-in-out infinite, pulsarAmarillo 4.5s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 28px rgba(255, 215, 0, 0.35);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.seccion-productos .esfera-decorativa-8 {
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.5) 0%, rgba(0, 167, 157, 0.25) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 15s ease-in-out infinite reverse, pulsarVerde 3.5s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 22px rgba(0, 167, 157, 0.4);
+    border: 2px solid rgba(0, 167, 157, 0.35);
+}
+
+.seccion-productos .contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+.seccion-productos .titulo-seccion {
+    color: #2E3192;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.producto {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-producto {
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 50%, #00A79D 100%);
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.producto:nth-child(2) .imagen-producto {
+    background: linear-gradient(135deg, #ED2E8B 0%, #f15fa3 50%, #FFD700 100%);
+}
+
+.imagen-producto i {
+    font-size: 3.5rem;
+    color: white;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto decorativo en la imagen */
+.imagen-producto::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    animation: rotar 20s linear infinite;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.contenido-producto {
+    padding: 30px;
+}
+
+.contenido-producto h3 {
+    color: #2E3192;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contenido-producto > p {
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.caracteristicas-producto {
+    margin-bottom: 30px;
+}
+
+.caracteristica {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+.caracteristica i {
+    color: #00A79D;
+    width: 20px;
+    margin-right: 12px;
+    font-size: 1rem;
+}
+
+.caracteristica span {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.precios-producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.precio-opcion {
+    background: #f8f9fa;
+    padding: 20px 15px;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.precio-opcion.destacado {
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 100%);
+    color: white;
+    border-color: #2E3192;
+    position: relative;
+}
+
+.precio-opcion.destacado::before {
+    content: 'POPULAR';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ED2E8B;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.etiqueta-precio {
+    display: block;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.precio {
+    font-size: 1.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.periodo {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.descuento {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.botones-producto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.btn-producto {
+    display: block;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-producto.btn-primario {
+    background: linear-gradient(135deg, #ED2E8B 0%, #f15fa3 100%);
+    color: white;
+    box-shadow: 0 4px 15px rgba(237, 46, 139, 0.3);
+}
+
+.btn-producto.btn-primario:hover {
+    background: linear-gradient(135deg, #d6247a 0%, #e1458a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(237, 46, 139, 0.4);
+    color: white;
+}
+
+.btn-producto.btn-secundario {
+    background: transparent;
+    color: #2E3192;
+    border-color: #2E3192;
+    font-weight: 600;
+}
+
+.btn-producto.btn-secundario:hover {
+    background: #2E3192;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(46, 49, 146, 0.3);
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1024px) {
+    .grid-productos {
+        gap: 30px;
+    }
+    
+    .seccion-productos::before,
+    .seccion-productos::after {
+        transform: scale(0.8);
+    }
+    
+    .seccion-productos .esfera-decorativa-6,
+    .seccion-productos .esfera-decorativa-7,
+    .seccion-productos .esfera-decorativa-8 {
+        transform: scale(0.7);
+    }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .seccion-productos {
+        padding: 60px 0;
+    }
+
+    .grid-productos {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contenido-producto {
+        padding: 25px 20px;
+    }
+
+    .precios-producto {
+        gap: 10px;
+    }
+
+    .precio-opcion {
+        padding: 15px 10px;
+    }
+    
+    .botones-producto {
+        gap: 8px;
+    }
+    
+    .btn-producto {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+    
+    /* Ocultar algunas esferas en móviles */
+    .seccion-productos .esfera-decorativa-7,
+    .seccion-productos .esfera-decorativa-8 {
+        display: none;
+    }
+    
+    .seccion-productos::before,
+    .seccion-productos::after {
+        transform: scale(0.6);
+    }
+    
+    .seccion-productos .esfera-decorativa-6 {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenido-producto h3 {
+        font-size: 1.4rem;
+    }
+    
+    .precio {
+        font-size: 1.6rem;
+    }
+    
+    .imagen-producto {
+        height: 100px;
+    }
+    
+    .imagen-producto i {
+        font-size: 3rem;
+    }
+    
+    .botones-producto {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .btn-producto {
+        padding: 14px 20px;
+        font-size: 0.9rem;
+    }
+}
+
 /* Añadir Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
