@@ -1124,5 +1124,792 @@
     }
 }
 
+/* Sección Contacto */
+.seccion-contacto {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 30%, #ED2E8B 70%, #f15fa3 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Esferas decorativas para la sección Contacto */
+.seccion-contacto::before {
+    content: '';
+    position: absolute;
+    top: -120px;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 32s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
+}
+
+.seccion-contacto::after {
+    content: '';
+    position: absolute;
+    bottom: -150px;
+    right: 8%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.25) 0%, rgba(0, 167, 157, 0.12) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 26s ease-in-out infinite reverse;
+    z-index: 1;
+    box-shadow: 0 0 80px rgba(0, 167, 157, 0.15);
+}
+
+/* Esferas adicionales para Contacto */
+.seccion-contacto .esfera-decorativa-9 {
+    position: absolute;
+    top: 20%;
+    right: 12%;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.4) 0%, rgba(255, 215, 0, 0.2) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 20s ease-in-out infinite, pulsarAmarillo 6s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 45px rgba(255, 215, 0, 0.3);
+    border: 3px solid rgba(255, 215, 0, 0.3);
+}
+
+.seccion-contacto .esfera-decorativa-10 {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.18) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 24s ease-in-out infinite, pulsar 8s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.seccion-contacto .esfera-decorativa-11 {
+    position: absolute;
+    bottom: 40%;
+    right: 30%;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.5) 0%, rgba(237, 46, 139, 0.25) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 16s ease-in-out infinite reverse, pulsarRosa 4s ease-in-out infinite;
+    z-index: 1;
+    box-shadow: 0 0 25px rgba(237, 46, 139, 0.4);
+    border: 2px solid rgba(237, 46, 139, 0.4);
+}
+
+.seccion-contacto .contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+.seccion-contacto .titulo-seccion {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-contacto .titulo-seccion::after {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-top: 50px;
+    align-items: stretch;
+}
+
+.info-contacto,
+.formulario-contacto {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-contacto h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.info-contacto > p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.detalles-contacto {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.whatsapp-destacado {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.whatsapp-destacado:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border-color: rgba(37, 211, 102, 0.5);
+}
+
+.whatsapp-contenido-superior {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.whatsapp-contenido-inferior {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.icono-contacto-whatsapp {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+.whatsapp-destacado:hover .icono-contacto-whatsapp {
+    transform: scale(1.1);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+}
+
+.icono-contacto-whatsapp i {
+    color: white;
+    font-size: 35px;
+    animation: latido 2s ease-in-out infinite;
+}
+
+@keyframes latido {
+    0%, 50%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+}
+
+.texto-contacto-whatsapp h4 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.numero-whatsapp {
+    color: #25D366;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.descripcion-whatsapp {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    border: 2px solid transparent;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn-whatsapp i {
+    font-size: 1.1rem;
+    animation: rebote 1.5s ease-in-out infinite;
+}
+
+@keyframes rebote {
+    0%, 50%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Formulario de contacto */
+.formulario-contacto {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.grupo-input {
+    position: relative;
+}
+
+.grupo-input input,
+.grupo-input select,
+.grupo-input textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    background: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.grupo-input input:focus,
+.grupo-input select:focus,
+.grupo-input textarea:focus {
+    outline: none;
+    border-color: #2E3192;
+    box-shadow: 0 0 0 3px rgba(46, 49, 146, 0.1);
+    transform: translateY(-2px);
+}
+
+.grupo-input label {
+    position: absolute;
+    left: 20px;
+    top: -8px;
+    background: white;
+    padding: 0 8px;
+    color: #2E3192;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+.grupo-input textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-enviar {
+    background: linear-gradient(135deg, #ED2E8B 0%, #f15fa3 100%);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 8px 20px rgba(237, 46, 139, 0.3);
+}
+
+.btn-enviar:hover {
+    background: linear-gradient(135deg, #d6247a 0%, #e1458a 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(237, 46, 139, 0.4);
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px);
+}
+
+/* Redes Sociales */
+.redes-sociales {
+    margin-top: 80px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 50px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.redes-sociales h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.redes-sociales > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.enlaces-redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.red-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 25px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+    backdrop-filter: blur(5px);
+}
+
+.red-social:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.red-social i {
+    font-size: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.red-social span {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Colores específicos para cada red social */
+.red-social.facebook:hover {
+    background: rgba(24, 119, 242, 0.9);
+    border-color: #1877f2;
+}
+
+.red-social.facebook i {
+    color: #1877f2;
+}
+
+.red-social.facebook:hover i,
+.red-social.facebook:hover span {
+    color: white;
+}
+
+.red-social.instagram:hover {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    border-color: #e4405f;
+}
+
+.red-social.instagram i {
+    background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.red-social.instagram:hover i,
+.red-social.instagram:hover span {
+    color: white;
+    -webkit-text-fill-color: white;
+}
+
+.red-social.youtube:hover {
+    background: rgba(255, 0, 0, 0.9);
+    border-color: #ff0000;
+}
+
+.red-social.youtube i {
+    color: #ff0000;
+}
+
+.red-social.youtube:hover i,
+.red-social.youtube:hover span {
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.contenido-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.logo-footer img {
+    height: 60px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+.logo-footer p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.links-footer h4,
+.servicios-footer h4 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.links-footer ul,
+.servicios-footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-footer li,
+.servicios-footer li {
+    margin-bottom: 12px;
+}
+
+.links-footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.links-footer a:hover {
+    color: #ED2E8B;
+}
+
+.servicios-footer li {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.derechos-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.derechos-footer p {
+    color: #999;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive para tablets */
+@media screen and (max-width: 1024px) {
+    .contenido-contacto {
+        gap: 40px;
+    }
+    
+    .formulario-contacto {
+        padding: 30px;
+    }
+    
+    .whatsapp-destacado {
+        padding: 38px 28px;
+        max-width: 380px;
+    }
+    
+    .icono-contacto-whatsapp {
+        width: 95px;
+        height: 95px;
+    }
+    
+    .icono-contacto-whatsapp i {
+        font-size: 42px;
+    }
+    
+    .enlaces-redes {
+        gap: 20px;
+    }
+    
+    .contenido-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    /* Reducir esferas en tablets */
+    .seccion-contacto::before,
+    .seccion-contacto::after {
+        transform: scale(0.8);
+    }
+    
+    .seccion-contacto .esfera-decorativa-9,
+    .seccion-contacto .esfera-decorativa-10,
+    .seccion-contacto .esfera-decorativa-11 {
+        transform: scale(0.7);
+    }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 768px) {
+    .seccion-contacto {
+        padding: 60px 0;
+    }
+    
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .whatsapp-destacado {
+        padding: 25px 20px;
+        max-width: 350px;
+    }
+    
+    .icono-contacto-whatsapp {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 15px;
+    }
+    
+    .icono-contacto-whatsapp i {
+        font-size: 30px;
+    }
+    
+    .texto-contacto-whatsapp h4 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .numero-whatsapp {
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+    }
+    
+    .descripcion-whatsapp {
+        font-size: 0.9rem;
+    }
+    
+    .btn-whatsapp {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .formulario-contacto {
+        padding: 25px 20px;
+    }
+    
+    .redes-sociales {
+        margin-top: 50px;
+        padding: 40px 25px;
+    }
+    
+    .enlaces-redes {
+        gap: 15px;
+    }
+    
+    .red-social {
+        min-width: 100px;
+        padding: 20px 15px;
+    }
+    
+    .red-social i {
+        font-size: 2rem;
+    }
+    
+    .red-social span {
+        font-size: 0.9rem;
+    }
+    
+    .contenido-footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        text-align: left;
+    }
+    
+    .logo-footer {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    /* Ocultar algunas esferas en móviles */
+    .seccion-contacto .esfera-decorativa-10,
+    .seccion-contacto .esfera-decorativa-11 {
+        display: none;
+    }
+    
+    .seccion-contacto::before,
+    .seccion-contacto::after {
+        transform: scale(0.6);
+    }
+    
+    .seccion-contacto .esfera-decorativa-9 {
+        transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .whatsapp-destacado {
+        padding: 20px 15px;
+        border-radius: 20px;
+        margin: 0 10px;
+    }
+    
+    .whatsapp-contenido-inferior {
+        padding-top: 10px;
+    }
+    
+    .icono-contacto-whatsapp {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 12px;
+    }
+    
+    .icono-contacto-whatsapp i {
+        font-size: 25px;
+    }
+    
+    .texto-contacto-whatsapp h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .numero-whatsapp {
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+    
+    .descripcion-whatsapp {
+        font-size: 0.85rem;
+    }
+    
+    .btn-whatsapp {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+        gap: 8px;
+    }
+    
+    .btn-whatsapp i {
+        font-size: 1rem;
+    }
+    
+    .grupo-input input,
+    .grupo-input select,
+    .grupo-input textarea {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-enviar {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .enlaces-redes {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .red-social {
+        width: 200px;
+    }
+    
+    .footer {
+        padding: 40px 0 20px;
+    }
+    
+    .contenido-footer {
+        gap: 20px;
+    }
+    
+    .logo-footer img {
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .links-footer h4,
+    .servicios-footer h4 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+    
+    .links-footer li,
+    .servicios-footer li {
+        margin-bottom: 8px;
+    }
+    
+    .links-footer a,
+    .servicios-footer li {
+        font-size: 0.9rem;
+    }
+}
+
 /* Añadir Font Awesome */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
