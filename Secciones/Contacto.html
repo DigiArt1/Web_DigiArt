@@ -1,11 +1,246 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto - Digi Art Creativo</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../Componentes/css/Globales.css">
+    <link rel="stylesheet" href="../Componentes/css/Contacto.css">
 </head>
+
 <body>
-    
+    <!-- Overlay para cerrar el menú móvil -->
+    <div class="nav-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../Galeria/img/LOGO PRINCIPAL.png" alt="Digi Art Creativo Logo">
+            </a>
+
+            <ul class="nav-menu">
+                <li class="mobile-logo">
+                    <img src="../Galeria/img/VARIACION 1 FONDO BLANCO.jpg" alt="Digi Art Creativo Logo">
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Nosotros.html" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Servicios.html" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Productos.html" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <div class="nav-btn-container">
+                    <a href="Contacto.html" class="nav-btn">¡Más información!</a>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-contacto">
+        <div class="contenedor">
+            <div class="contenido-hero">
+                <h1>Contáctanos</h1>
+                <p>¿Tienes una idea? ¡Queremos escucharla! Estamos aquí para convertir tu visión en realidad digital</p>
+            </div>
+        </div>
+        <!-- Esferas decorativas -->
+        <div class="esfera-hero-1"></div>
+        <div class="esfera-hero-2"></div>
+    </section>
+
+    <!-- Sección Contacto Principal -->
+    <section class="seccion-contacto">
+        <div class="contenedor">
+            <div class="contenido-contacto">
+                <div class="info-contacto">
+                    <h3>Hablemos de tu proyecto</h3>
+                    <p>Estamos listos para ayudarte a materializar tus ideas. Nuestro equipo de expertos está disponible para brindarte la mejor solución digital.</p>
+                    
+                    <div class="detalles-contacto">
+                        <div class="detalle-contacto whatsapp-destacado">
+                            <div class="whatsapp-contenido-superior">
+                                <div class="icono-contacto-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div class="texto-contacto-whatsapp">
+                                    <h4>Contáctanos por WhatsApp</h4>
+                                    <p class="numero-whatsapp">+57 302 4834380</p>
+                                    <p class="descripcion-whatsapp">Disponible 24/7 para atenderte</p>
+                                </div>
+                            </div>
+                            <div class="whatsapp-contenido-inferior">
+                                <a href="https://wa.me/573024834380" target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Información adicional de contacto -->
+                        <div class="info-adicional">
+                            <div class="contacto-item">
+                                <div class="contacto-icono">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contacto-texto">
+                                    <h4>Email</h4>
+                                    <p>info@digiartcreativo.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icono">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contacto-texto">
+                                    <h4>Ubicación</h4>
+                                    <p>Medellín, Colombia</p>
+                                </div>
+                            </div>
+
+                            <div class="contacto-item">
+                                <div class="contacto-icono">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="contacto-texto">
+                                    <h4>Horario</h4>
+                                    <p>Lun - Vie: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="formulario-contacto">
+                    <form class="form-contacto" id="contactForm">
+                        <div class="grupo-input">
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                            <label for="nombre">Nombre completo</label>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                            <label for="email">Correo electrónico</label>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono">
+                            <label for="telefono">Teléfono (opcional)</label>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <select id="servicio" name="servicio" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="contenido">Creación de Contenido</option>
+                                <option value="video">Producción de Videos</option>
+                                <option value="web">Desarrollo Web</option>
+                                <option value="software">Software Empresarial</option>
+                                <option value="app">Aplicaciones Móviles</option>
+                                <option value="anuncios">Anuncios Digitales</option>
+                                <option value="ia-whatsapp">Agente IA WhatsApp</option>
+                                <option value="chatbot">Chatbot Flotante IA</option>
+                            </select>
+                            <label for="servicio">Servicio de interés</label>
+                        </div>
+                        
+                        <div class="grupo-input">
+                            <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos sobre tu proyecto..." rows="5" required></textarea>
+                            <label for="mensaje">Mensaje</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-enviar">
+                            <i class="fas fa-paper-plane"></i>
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Redes Sociales -->
+            <div class="redes-sociales">
+                <h3>Síguenos en nuestras redes</h3>
+                <p>Mantente al día con nuestros últimos proyectos y consejos creativos</p>
+                <div class="enlaces-redes">
+                    <a href="https://facebook.com/digiartcreativo" target="_blank" class="red-social facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a href="https://instagram.com/digiartcreativo" target="_blank" class="red-social instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://youtube.com/@digiartcreativo" target="_blank" class="red-social youtube">
+                        <i class="fab fa-youtube"></i>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Esferas decorativas -->
+        <div class="esfera-contacto-1"></div>
+        <div class="esfera-contacto-2"></div>
+        <div class="esfera-contacto-3"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contenido-footer">
+                <div class="logo-footer">
+                    <img src="../Galeria/img/LOGO PRINCIPAL.png" alt="Digi Art Creativo">
+                    <p>Transformando ideas en experiencias digitales extraordinarias</p>
+                </div>
+                <div class="links-footer">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Servicios.html">Servicios</a></li>
+                        <li><a href="Productos.html">Productos</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="servicios-footer">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Diseño Gráfico</li>
+                        <li>Desarrollo Web</li>
+                        <li>Marketing Digital</li>
+                        <li>Aplicaciones Móviles</li>
+                        <li>Inteligencia Artificial</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="derechos-footer">
+                <p>&copy; 2025 Digi Art Creativo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../Componentes/js/Globales.js"></script>
+    <script src="../Componentes/js/Contacto.js"></script>
 </body>
+
 </html>

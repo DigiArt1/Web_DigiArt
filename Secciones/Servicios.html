@@ -1,11 +1,367 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Servicios - Digi Art Creativo</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../Componentes/css/Globales.css">
+    <link rel="stylesheet" href="../Componentes/css/Servicios.css">
 </head>
+
 <body>
-    
+    <!-- Overlay para cerrar el menú móvil -->
+    <div class="nav-overlay"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">
+                <img src="../Galeria/img/LOGO PRINCIPAL.png" alt="Digi Art Creativo Logo">
+            </a>
+
+            <ul class="nav-menu">
+                <li class="mobile-logo">
+                    <img src="../Galeria/img/VARIACION 1 FONDO BLANCO.jpg" alt="Digi Art Creativo Logo">
+                </li>
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Nosotros.html" class="nav-link">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Servicios.html" class="nav-link">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Productos.html" class="nav-link">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Contacto.html" class="nav-link">Contacto</a>
+                </li>
+                <div class="nav-btn-container">
+                    <a href="Contacto.html" class="nav-btn">¡Más información!</a>
+                </div>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero-servicios">
+        <div class="contenedor">
+            <div class="contenido-hero">
+                <h1>Nuestros Servicios</h1>
+                <p>Soluciones digitales innovadoras para impulsar tu negocio al siguiente nivel</p>
+            </div>
+        </div>
+        <!-- Esferas decorativas -->
+        <div class="esfera-hero-1"></div>
+        <div class="esfera-hero-2"></div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section class="seccion-servicios">
+        <div class="contenedor">
+            <div class="grid-servicios">
+                <!-- Servicio 1: Creación de Contenido -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center" alt="Creación de Contenido">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Creación%20de%20Contenido"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3>Creación de Contenido</h3>
+                        <p>Contenido creativo y estratégico para tus redes sociales y plataformas digitales que conecta
+                            con tu audiencia.</p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Diseño gráfico profesional</li>
+                            <li><i class="fas fa-check"></i> Marketing de contenidos</li>
+                            <li><i class="fas fa-check"></i> Gestión de redes sociales</li>
+                            <li><i class="fas fa-check"></i> Branding digital</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$150</span>
+                            <span class="precio-periodo">/mes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Producción de Videos -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop&crop=center" alt="Producción de Videos">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Producción%20de%20Videos"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>Producción de Videos</h3>
+                        <p>Videos profesionales que cautivan a tu audiencia y transmiten tu mensaje de manera efectiva.
+                        </p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Videos corporativos</li>
+                            <li><i class="fas fa-check"></i> Anuncios publicitarios</li>
+                            <li><i class="fas fa-check"></i> Contenido para redes</li>
+                            <li><i class="fas fa-check"></i> Animación digital</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$300</span>
+                            <span class="precio-periodo">/proyecto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Desarrollo Web -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=300&fit=crop&crop=center" alt="Desarrollo Web">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Desarrollo%20Web"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios web modernos y funcionales que destacan tu presencia digital y convierten visitantes
+                            en clientes.</p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Diseño responsivo</li>
+                            <li><i class="fas fa-check"></i> E-commerce</li>
+                            <li><i class="fas fa-check"></i> Landing pages</li>
+                            <li><i class="fas fa-check"></i> Optimización SEO</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$500</span>
+                            <span class="precio-periodo">/proyecto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Software Empresarial -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center" alt="Software Empresarial">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Software%20Empresarial"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Software Empresarial</h3>
+                        <p>Soluciones personalizadas para optimizar tus procesos de negocio y aumentar la productividad.
+                        </p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Sistemas de gestión</li>
+                            <li><i class="fas fa-check"></i> CRM personalizado</li>
+                            <li><i class="fas fa-check"></i> Automatización</li>
+                            <li><i class="fas fa-check"></i> Análisis de datos</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$1,200</span>
+                            <span class="precio-periodo">/proyecto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Aplicaciones Móviles -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop&crop=center" alt="Aplicaciones Móviles">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Aplicaciones%20Móviles"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Aplicaciones Móviles</h3>
+                        <p>Apps nativas y multiplataforma que conectan con tus usuarios y mejoran su experiencia.</p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> iOS y Android</li>
+                            <li><i class="fas fa-check"></i> PWA</li>
+                            <li><i class="fas fa-check"></i> UI/UX móvil</li>
+                            <li><i class="fas fa-check"></i> Integración API</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$800</span>
+                            <span class="precio-periodo">/proyecto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Anuncios Digitales -->
+                <div class="servicio-card">
+                    <div class="servicio-imagen">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center" alt="Anuncios Digitales">
+                        <div class="overlay-servicio">
+                            <div class="whatsapp-contact">
+                                <div class="whatsapp-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h4>Contáctanos por WhatsApp</h4>
+                                <p class="whatsapp-number">+57 302 4834380</p>
+                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Anuncios%20Digitales"
+                                    target="_blank" class="btn-whatsapp">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Chatear ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="servicio-contenido">
+                        <div class="servicio-icono">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <h3>Anuncios Digitales</h3>
+                        <p>Campañas publicitarias efectivas para alcanzar a tu público objetivo y maximizar tu ROI.</p>
+                        <ul class="servicio-features">
+                            <li><i class="fas fa-check"></i> Google Ads</li>
+                            <li><i class="fas fa-check"></i> Facebook Ads</li>
+                            <li><i class="fas fa-check"></i> Instagram Ads</li>
+                            <li><i class="fas fa-check"></i> Marketing digital</li>
+                        </ul>
+                        <div class="servicio-precio">
+                            <span class="precio-desde">Desde</span>
+                            <span class="precio">$200</span>
+                            <span class="precio-periodo">/mes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Esferas decorativas -->
+        <div class="esfera-servicios-1"></div>
+        <div class="esfera-servicios-2"></div>
+        <div class="esfera-servicios-3"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="contenido-footer">
+                <div class="logo-footer">
+                    <img src="../Galeria/img/LOGO PRINCIPAL.png" alt="Digi Art Creativo">
+                    <p>Transformando ideas en experiencias digitales extraordinarias</p>
+                </div>
+                <div class="links-footer">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="Nosotros.html">Nosotros</a></li>
+                        <li><a href="Servicios.html">Servicios</a></li>
+                        <li><a href="Productos.html">Productos</a></li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="servicios-footer">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li>Diseño Gráfico</li>
+                        <li>Desarrollo Web</li>
+                        <li>Marketing Digital</li>
+                        <li>Aplicaciones Móviles</li>
+                        <li>Inteligencia Artificial</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="derechos-footer">
+                <p>&copy; 2025 Digi Art Creativo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../Componentes/js/Globales.js"></script>
+    <script src="../Componentes/js/Servicios.js"></script>
 </body>
+
 </html>
