@@ -1,0 +1,52 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombre": "Empresa Tech Solutions",
+      "logo": "Galeria/img/clientes/cliente1.png",
+      "categoria": "Tecnología"
+    },
+    {
+      "id": 2,
+      "nombre": "Restaurante El Sabor",
+      "logo": "Galeria/img/clientes/cliente2.png",
+      "categoria": "Gastronomía"
+    },
+    {
+      "id": 3,
+      "nombre": "Boutique Fashion",
+      "logo": "Galeria/img/clientes/cliente3.png",
+      "categoria": "Moda"
+    },
+    {
+      "id": 4,
+      "nombre": "Gym Fitness Pro",
+      "logo": "Galeria/img/clientes/cliente4.png",
+      "categoria": "Deportes"
+    },
+    {
+      "id": 5,
+      "nombre": "Clínica Salud Total",
+      "logo": "Galeria/img/clientes/cliente5.png",
+      "categoria": "Salud"
+    },
+    {
+      "id": 6,
+      "nombre": "Constructora Edificar",
+      "logo": "Galeria/img/clientes/cliente6.png",
+      "categoria": "Construcción"
+    },
+    {
+      "id": 7,
+      "nombre": "Café Aroma",
+      "logo": "Galeria/img/clientes/cliente7.png",
+      "categoria": "Gastronomía"
+    },
+    {
+      "id": 8,
+      "nombre": "Academia Educativa",
+      "logo": "Galeria/img/clientes/cliente8.png",
+      "categoria": "Educación"
+    }
+  ]
+}

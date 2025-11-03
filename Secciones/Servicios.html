@@ -1,53 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios - Digi Art Creativo</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Estilos CSS -->
     <link rel="stylesheet" href="../Componentes/css/Globales.css">
     <link rel="stylesheet" href="../Componentes/css/Servicios.css">
 </head>
-
 <body>
-    <!-- Overlay para cerrar el menú móvil -->
     <div class="nav-overlay"></div>
-
     <nav class="navbar">
         <div class="nav-container">
             <a href="../index.html" class="logo">
                 <img src="../Galeria/img/LOGO PRINCIPAL.png" alt="Digi Art Creativo Logo">
             </a>
-
             <ul class="nav-menu">
                 <li class="mobile-logo">
                     <img src="../Galeria/img/VARIACION 1 FONDO BLANCO.jpg" alt="Digi Art Creativo Logo">
                 </li>
-                <li class="nav-item">
-                    <a href="../index.html" class="nav-link">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Nosotros.html" class="nav-link">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Servicios.html" class="nav-link">Servicios</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Productos.html" class="nav-link">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Contacto.html" class="nav-link">Contacto</a>
-                </li>
+                <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="Nosotros.html" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="Servicios.html" class="nav-link">Servicios</a></li>
+                <li class="nav-item"><a href="Productos.html" class="nav-link">Productos</a></li>
+                <li class="nav-item"><a href="Contacto.html" class="nav-link">Contacto</a></li>
                 <div class="nav-btn-container">
                     <a href="Contacto.html" class="nav-btn">¡Más información!</a>
                 </div>
             </ul>
-
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -56,7 +37,6 @@
         </div>
     </nav>
 
-    <!-- Sección Hero -->
     <section class="hero-servicios">
         <div class="contenedor">
             <div class="contenido-hero">
@@ -64,267 +44,418 @@
                 <p>Soluciones digitales innovadoras para impulsar tu negocio al siguiente nivel</p>
             </div>
         </div>
-        <!-- Esferas decorativas -->
         <div class="esfera-hero-1"></div>
         <div class="esfera-hero-2"></div>
     </section>
 
-    <!-- Sección Servicios -->
     <section class="seccion-servicios">
         <div class="contenedor">
-            <div class="grid-servicios">
-                <!-- Servicio 1: Creación de Contenido -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center" alt="Creación de Contenido">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+            <h2 class="titulo-seccion-servicios">Catálogo de Proyectos</h2>
+            <p class="subtitulo-servicios">Explora nuestro portafolio de trabajos realizados para clientes reales</p>
+            
+            <!-- Menú de Categorías -->
+            <div class="menu-categorias">
+                <button class="categoria-btn active" data-categoria="audiovisual">
+                    <i class="fas fa-video"></i>
+                    <span>Producción Audiovisual</span>
+                </button>
+                <button class="categoria-btn" data-categoria="branding">
+                    <i class="fas fa-palette"></i>
+                    <span>Branding</span>
+                </button>
+                <button class="categoria-btn" data-categoria="websites">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Websites</span>
+                </button>
+                <button class="categoria-btn" data-categoria="redes">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Redes Sociales</span>
+                </button>
+            </div>
+
+            <!-- Contenedor de Proyectos (se carga dinámicamente desde JSON) -->
+            <div class="proyectos-container">
+                <!-- Los proyectos se cargan dinámicamente -->
+                <div class="categoria-proyectos active" id="audiovisual">
+                    <div class="proyectos-grid">
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop" alt="Video Corporativo">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-play"></i> Ver Demo</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Creación%20de%20Contenido"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Videos Corporativos</h3>
+                                <p>Contenido profesional que cuenta la historia de tu empresa</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">4K</span>
+                                    <span class="tag">Drone</span>
+                                    <span class="tag">Edición</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Videos%20Corporativos" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-pencil-ruler"></i>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop" alt="Anuncios Publicitarios">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-play"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Anuncios Publicitarios</h3>
+                                <p>Spots creativos que impactan y generan conversiones</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">30s</span>
+                                    <span class="tag">Motion</span>
+                                    <span class="tag">Audio</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Anuncios%20Publicitarios" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
-                        <h3>Creación de Contenido</h3>
-                        <p>Contenido creativo y estratégico para tus redes sociales y plataformas digitales que conecta
-                            con tu audiencia.</p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> Diseño gráfico profesional</li>
-                            <li><i class="fas fa-check"></i> Marketing de contenidos</li>
-                            <li><i class="fas fa-check"></i> Gestión de redes sociales</li>
-                            <li><i class="fas fa-check"></i> Branding digital</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$150</span>
-                            <span class="precio-periodo">/mes</span>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop" alt="Contenido Redes">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-play"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Contenido para Redes</h3>
+                                <p>Videos optimizados para Instagram, TikTok y más</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Vertical</span>
+                                    <span class="tag">Reels</span>
+                                    <span class="tag">Stories</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Contenido%20para%20Redes" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop" alt="Animación">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-play"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Animación Digital</h3>
+                                <p>Motion graphics y animaciones 2D/3D impactantes</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">2D/3D</span>
+                                    <span class="tag">Motion</span>
+                                    <span class="tag">VFX</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Animación%20Digital" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Servicio 2: Producción de Videos -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop&crop=center" alt="Producción de Videos">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                <!-- Branding -->
+                <div class="categoria-proyectos" id="branding">
+                    <div class="proyectos-grid">
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop" alt="Identidad Corporativa">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Producción%20de%20Videos"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Identidad Corporativa</h3>
+                                <p>Diseño de logo y manual de marca completo</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Logo</span>
+                                    <span class="tag">Manual</span>
+                                    <span class="tag">Colores</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Identidad%20Corporativa" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-video"></i>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop" alt="Diseño Gráfico">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Diseño Gráfico</h3>
+                                <p>Piezas visuales para todos tus canales digitales</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Posts</span>
+                                    <span class="tag">Banners</span>
+                                    <span class="tag">Flyers</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Diseño%20Gráfico" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
-                        <h3>Producción de Videos</h3>
-                        <p>Videos profesionales que cautivan a tu audiencia y transmiten tu mensaje de manera efectiva.
-                        </p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> Videos corporativos</li>
-                            <li><i class="fas fa-check"></i> Anuncios publicitarios</li>
-                            <li><i class="fas fa-check"></i> Contenido para redes</li>
-                            <li><i class="fas fa-check"></i> Animación digital</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$300</span>
-                            <span class="precio-periodo">/proyecto</span>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=600&h=400&fit=crop" alt="Packaging">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Packaging</h3>
+                                <p>Diseño de empaques que destacan tu producto</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">3D</span>
+                                    <span class="tag">Mockup</span>
+                                    <span class="tag">Print</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Packaging" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop" alt="Material Impreso">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Material Impreso</h3>
+                                <p>Brochures, tarjetas y material promocional</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Brochure</span>
+                                    <span class="tag">Tarjetas</span>
+                                    <span class="tag">Catálogos</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Material%20Impreso" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Servicio 3: Desarrollo Web -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=300&fit=crop&crop=center" alt="Desarrollo Web">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                <!-- Websites -->
+                <div class="categoria-proyectos" id="websites">
+                    <div class="proyectos-grid">
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="E-commerce">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-external-link-alt"></i> Ver Demo</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Desarrollo%20Web"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>E-commerce</h3>
+                                <p>Tiendas online completas con pasarela de pagos</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Shopify</span>
+                                    <span class="tag">WooCommerce</span>
+                                    <span class="tag">Custom</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20E-commerce" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-code"></i>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop" alt="Landing Pages">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-external-link-alt"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Landing Pages</h3>
+                                <p>Páginas de aterrizaje que convierten visitantes</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Responsive</span>
+                                    <span class="tag">SEO</span>
+                                    <span class="tag">Fast</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Landing%20Pages" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
-                        <h3>Desarrollo Web</h3>
-                        <p>Sitios web modernos y funcionales que destacan tu presencia digital y convierten visitantes
-                            en clientes.</p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> Diseño responsivo</li>
-                            <li><i class="fas fa-check"></i> E-commerce</li>
-                            <li><i class="fas fa-check"></i> Landing pages</li>
-                            <li><i class="fas fa-check"></i> Optimización SEO</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$500</span>
-                            <span class="precio-periodo">/proyecto</span>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Sitios Corporativos">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-external-link-alt"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Sitios Corporativos</h3>
+                                <p>Presencia web profesional para tu empresa</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">CMS</span>
+                                    <span class="tag">Multi-idioma</span>
+                                    <span class="tag">Admin</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Sitios%20Corporativos" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop" alt="Blogs">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-external-link-alt"></i> Ver Demo</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Blogs & Portales</h3>
+                                <p>Plataformas de contenido optimizadas para SEO</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">WordPress</span>
+                                    <span class="tag">SEO</span>
+                                    <span class="tag">Analytics</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Blogs%20y%20Portales" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Servicio 4: Software Empresarial -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center" alt="Software Empresarial">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                <!-- Redes Sociales -->
+                <div class="categoria-proyectos" id="redes">
+                    <div class="proyectos-grid">
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop" alt="Gestión Redes">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Software%20Empresarial"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Gestión de Redes</h3>
+                                <p>Administración completa de tus perfiles sociales</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Instagram</span>
+                                    <span class="tag">Facebook</span>
+                                    <span class="tag">TikTok</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Gestión%20de%20Redes" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-building"></i>
-                        </div>
-                        <h3>Software Empresarial</h3>
-                        <p>Soluciones personalizadas para optimizar tus procesos de negocio y aumentar la productividad.
-                        </p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> Sistemas de gestión</li>
-                            <li><i class="fas fa-check"></i> CRM personalizado</li>
-                            <li><i class="fas fa-check"></i> Automatización</li>
-                            <li><i class="fas fa-check"></i> Análisis de datos</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$1,200</span>
-                            <span class="precio-periodo">/proyecto</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Servicio 5: Aplicaciones Móviles -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop&crop=center" alt="Aplicaciones Móviles">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop" alt="Creación Contenido">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Aplicaciones%20Móviles"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Creación de Contenido</h3>
+                                <p>Posts, stories y contenido visual atractivo</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Posts</span>
+                                    <span class="tag">Stories</span>
+                                    <span class="tag">Reels</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Creación%20de%20Contenido" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Aplicaciones Móviles</h3>
-                        <p>Apps nativas y multiplataforma que conectan con tus usuarios y mejoran su experiencia.</p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> iOS y Android</li>
-                            <li><i class="fas fa-check"></i> PWA</li>
-                            <li><i class="fas fa-check"></i> UI/UX móvil</li>
-                            <li><i class="fas fa-check"></i> Integración API</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$800</span>
-                            <span class="precio-periodo">/proyecto</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Servicio 6: Anuncios Digitales -->
-                <div class="servicio-card">
-                    <div class="servicio-imagen">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center" alt="Anuncios Digitales">
-                        <div class="overlay-servicio">
-                            <div class="whatsapp-contact">
-                                <div class="whatsapp-icon">
-                                    <i class="fab fa-whatsapp"></i>
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop" alt="Publicidad Digital">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
                                 </div>
-                                <h4>Contáctanos por WhatsApp</h4>
-                                <p class="whatsapp-number">+57 302 4834380</p>
-                                <p class="whatsapp-desc">Disponible 24/7 para atenderte</p>
-                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20el%20servicio%20de%20Anuncios%20Digitales"
-                                    target="_blank" class="btn-whatsapp">
-                                    <i class="fab fa-whatsapp"></i>
-                                    Chatear ahora
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Publicidad Digital</h3>
+                                <p>Campañas en Facebook, Instagram y más</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Ads</span>
+                                    <span class="tag">ROI</span>
+                                    <span class="tag">Analytics</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Publicidad%20Digital" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="servicio-contenido">
-                        <div class="servicio-icono">
-                            <i class="fas fa-ad"></i>
-                        </div>
-                        <h3>Anuncios Digitales</h3>
-                        <p>Campañas publicitarias efectivas para alcanzar a tu público objetivo y maximizar tu ROI.</p>
-                        <ul class="servicio-features">
-                            <li><i class="fas fa-check"></i> Google Ads</li>
-                            <li><i class="fas fa-check"></i> Facebook Ads</li>
-                            <li><i class="fas fa-check"></i> Instagram Ads</li>
-                            <li><i class="fas fa-check"></i> Marketing digital</li>
-                        </ul>
-                        <div class="servicio-precio">
-                            <span class="precio-desde">Desde</span>
-                            <span class="precio">$200</span>
-                            <span class="precio-periodo">/mes</span>
+
+                        <div class="proyecto-card">
+                            <div class="proyecto-imagen">
+                                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop" alt="Community Management">
+                                <div class="proyecto-overlay">
+                                    <button class="btn-demo"><i class="fas fa-eye"></i> Ver Proyecto</button>
+                                </div>
+                            </div>
+                            <div class="proyecto-info">
+                                <h3>Community Management</h3>
+                                <p>Interacción y crecimiento de tu comunidad</p>
+                                <div class="proyecto-tags">
+                                    <span class="tag">Engagement</span>
+                                    <span class="tag">Growth</span>
+                                    <span class="tag">Support</span>
+                                </div>
+                                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20Community%20Management" target="_blank" class="btn-contactar">
+                                    <i class="fab fa-whatsapp"></i> Consultar
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Sección de Clientes -->
+            <section class="seccion-clientes-servicios">
+                <h3 class="titulo-clientes-small">Confían en nosotros</h3>
+                <div class="carrusel-clientes">
+                    <div class="carrusel-track">
+                        <!-- Los logos se cargan dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <div class="cta-servicios">
+                <h3>¿No encuentras lo que buscas?</h3>
+                <p>Contáctanos y creamos una solución personalizada para ti</p>
+                <a href="https://wa.me/573024834380?text=Hola,%20necesito%20información%20sobre%20servicios%20personalizados" target="_blank" class="btn-cta-servicios">
+                    <i class="fab fa-whatsapp"></i>
+                    Hablar con un asesor
+                </a>
+            </div>
         </div>
-        <!-- Esferas decorativas -->
         <div class="esfera-servicios-1"></div>
         <div class="esfera-servicios-2"></div>
         <div class="esfera-servicios-3"></div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="contenedor">
             <div class="contenido-footer">
@@ -359,9 +490,8 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="../Componentes/js/Globales.js"></script>
+    <script src="../Componentes/js/Clientes.js"></script>
     <script src="../Componentes/js/Servicios.js"></script>
 </body>
-
 </html>

@@ -132,10 +132,10 @@ function obtenerInfoMiembro(miembro) {
             descripcion: 'Especialista en marketing digital con enfoque en ROI y crecimiento orgánico. Experto en campañas publicitarias y análisis de datos.'
         },
         '4': {
-            nombre: 'Ana Martínez',
-            cargo: 'Productora Audiovisual',
-            experiencia: '4 años',
-            especialidades: ['After Effects', 'Premiere Pro', 'Cinema 4D', 'DaVinci'],
+            nombre: 'Jadinzon Diaz',
+            cargo: 'Diseñador Grafico',
+            experiencia: '8 años',
+            especialidades: ['After Effects', 'Premiere Pro', 'Cinema 4D', 'Adobe'],
             proyectos: '45+',
             descripción: 'Productora audiovisual con experiencia en contenido digital y publicitario. Especializada en motion graphics y postproducción.'
         },

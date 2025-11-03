@@ -274,103 +274,52 @@
 }
 
 .grid-equipo {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.fila-equipo {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.primera-fila {
-    /* 3 tarjetas en la primera fila */
-}
-
-.segunda-fila {
-    /* 2 tarjetas en la segunda fila */
-    justify-content: center;
-}
-
-.fila-equipo .tarjeta-fifa {
+.tarjeta-fifa {
     flex: 0 0 300px;
     max-width: 300px;
 }
 
-/* Tarjetas estilo FIFA */
-.tarjeta-fifa {
-    background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+/* Tarjetas Profesionales Modernas */
+.tarjeta-profesional {
+    background: white;
     border-radius: 20px;
-    padding: 25px;
+    padding: 0;
     position: relative;
     overflow: hidden;
     transition: all 0.4s ease;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     border: 2px solid transparent;
 }
 
-.tarjeta-fifa:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+.tarjeta-profesional:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
     border-color: var(--color-primario);
 }
 
-.tarjeta-fifa::before {
-    content: '';
+.tarjeta-bg {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, 
-        rgba(237, 46, 139, 0.1) 0%, 
-        rgba(46, 49, 146, 0.1) 50%, 
-        rgba(0, 167, 157, 0.1) 100%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    height: 120px;
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
     z-index: 1;
-}
-
-.tarjeta-fifa:hover::before {
-    opacity: 1;
 }
 
 .tarjeta-contenido {
     position: relative;
     z-index: 2;
-}
-
-.tarjeta-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.rating {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-    color: #1a1a2e;
-    font-size: 1.8rem;
-    font-weight: 700;
-    padding: 8px 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
-}
-
-.posicion {
-    background: rgba(255, 255, 255, 0.9);
-    color: #1a1a2e;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 8px;
-    letter-spacing: 1px;
+    padding: 80px 25px 30px;
+    text-align: center;
 }
 
 .foto-miembro {
@@ -379,12 +328,13 @@
     margin: 0 auto 20px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid var(--color-primario);
-    box-shadow: 0 8px 25px rgba(237, 46, 139, 0.3);
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
+    position: relative;
 }
 
-.tarjeta-fifa:hover .foto-miembro {
+.tarjeta-profesional:hover .foto-miembro {
     transform: scale(1.1);
 }
 
@@ -394,75 +344,134 @@
     object-fit: cover;
 }
 
-.info-miembro {
-    text-align: center;
+.foto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(237, 46, 139, 0.9) 0%, rgba(46, 49, 146, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tarjeta-profesional:hover .foto-overlay {
+    opacity: 1;
+}
+
+.foto-overlay i {
+    font-size: 2.5rem;
     color: white;
 }
 
+.info-miembro {
+    text-align: center;
+}
+
 .info-miembro h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-secundario);
 }
 
 .cargo {
-    color: var(--color-acento);
-    font-size: 0.95rem;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-.stats {
-    margin-top: 20px;
-}
-
-.stat {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    color: var(--color-primario);
+    font-size: 1rem;
     margin-bottom: 12px;
-}
-
-.stat-label {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
-}
-
-.stat-years {
-    font-size: 0.85rem;
-    color: var(--color-acento);
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 4px 8px;
-    border-radius: 8px;
 }
 
-@keyframes fillAnimation {
-    from { width: 0%; }
-    to { width: var(--final-width, 0%); }
+.experiencia {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.experiencia i {
+    color: var(--color-primario);
+}
+
+.especialidades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: linear-gradient(135deg, rgba(237, 46, 139, 0.1) 0%, rgba(46, 49, 146, 0.1) 100%);
+    color: var(--color-secundario);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(237, 46, 139, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-profesional:hover .tag {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: white;
+    border-color: transparent;
+}
+
+.stats-profesional {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-item i {
+    font-size: 1.5rem;
+    color: var(--color-primario);
+}
+
+.stat-item span {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 600;
 }
 
 /* Colores específicos para cada tarjeta */
-.tarjeta-fifa[data-miembro="1"] {
-    background: linear-gradient(145deg, #1a1a2e 0%, #2E3192 100%);
+.tarjeta-profesional[data-miembro="1"] .tarjeta-bg {
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 100%);
 }
 
-.tarjeta-fifa[data-miembro="2"] {
-    background: linear-gradient(145deg, #1a1a2e 0%, #ED2E8B 100%);
+.tarjeta-profesional[data-miembro="2"] .tarjeta-bg {
+    background: linear-gradient(135deg, #ED2E8B 0%, #f15fa3 100%);
 }
 
-.tarjeta-fifa[data-miembro="3"] {
-    background: linear-gradient(145deg, #1a1a2e 0%, #00A79D 100%);
+.tarjeta-profesional[data-miembro="3"] .tarjeta-bg {
+    background: linear-gradient(135deg, #00A79D 0%, #00c9bd 100%);
 }
 
-.tarjeta-fifa[data-miembro="4"] {
-    background: linear-gradient(145deg, #1a1a2e 0%, #FFD700 100%);
+.tarjeta-profesional[data-miembro="4"] .tarjeta-bg {
+    background: linear-gradient(135deg, #ff2600 0%, #ff5733 100%);
 }
 
-.tarjeta-fifa[data-miembro="5"] {
-    background: linear-gradient(145deg, #1a1a2e 0%, #2E3192 100%);
+.tarjeta-profesional[data-miembro="5"] .tarjeta-bg {
+    background: linear-gradient(135deg, #74922e 0%, #8fb03e 100%);
+}
+
+.tarjeta-profesional[data-miembro="6"] .tarjeta-bg {
+    background: linear-gradient(135deg, #4a4a4a 0%, #6b6b6b 100%);
 }
 
 /* Esferas decorativas del equipo */
@@ -781,12 +790,12 @@
     }
     
     .contenido-hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         text-align: center;
     }
     
     .contenido-hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: center;
     }
     
@@ -797,30 +806,66 @@
         padding: 60px 0;
     }
     
+    .seccion-empresa .contenedor,
+    .seccion-equipo .contenedor {
+        padding: 0 15px;
+    }
+    
     .estadisticas {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
+    }
+    
+    .estadistica {
+        padding: 15px;
+    }
+    
+    .numero {
+        font-size: 2rem;
     }
     
     .grid-mision-vision {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 25px;
     }
     
     .mision, .vision {
         padding: 30px 25px;
     }
     
-    .fila-equipo {
-        flex-direction: column;
-        align-items: center;
+    .grid-equipo {
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
     
-    .fila-equipo .tarjeta-fifa {
-        flex: 0 0 auto;
-        max-width: 350px;
-        width: 100%;
+    .tarjeta-profesional {
+        max-width: 100%;
+    }
+    
+    .tarjeta-contenido {
+        padding: 70px 20px 25px;
+    }
+    
+    .foto-miembro {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .info-miembro h3 {
+        font-size: 1.2rem;
+    }
+    
+    .cargo {
+        font-size: 0.9rem;
+    }
+    
+    .especialidades {
+        gap: 6px;
+    }
+    
+    .tag {
+        font-size: 0.75rem;
+        padding: 4px 10px;
     }
     
     .grid-valores {
@@ -831,7 +876,7 @@
     }
     
     .valor {
-        padding: 35px 25px;
+        padding: 30px 20px;
         margin: 0 auto;
         max-width: 350px;
     }
@@ -855,29 +900,71 @@
 
 @media screen and (max-width: 480px) {
     .contenido-hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    .contenido-hero p {
+        font-size: 0.95rem;
     }
     
     .titulo-seccion {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
-    .tarjeta-fifa {
-        padding: 20px;
+    .subtitulo-equipo {
+        font-size: 1rem;
     }
     
-    .rating {
-        font-size: 1.5rem;
-        padding: 6px 12px;
+    .grid-equipo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tarjeta-profesional {
+        padding: 0;
+    }
+    
+    .tarjeta-contenido {
+        padding: 60px 15px 20px;
     }
     
     .foto-miembro {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
+        border-width: 4px;
+    }
+    
+    .info-miembro h3 {
+        font-size: 1.1rem;
+    }
+    
+    .cargo {
+        font-size: 0.85rem;
+    }
+    
+    .experiencia {
+        font-size: 0.8rem;
+    }
+    
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .stats-profesional {
+        padding-top: 15px;
+    }
+    
+    .stat-item i {
+        font-size: 1.2rem;
+    }
+    
+    .stat-item span {
+        font-size: 0.75rem;
     }
     
     .valor {
-        padding: 30px 20px;
+        padding: 25px 15px;
     }
     
     .icono-valor {
@@ -887,5 +974,13 @@
     
     .icono-valor i {
         font-size: 1.5rem;
+    }
+    
+    .valor h3 {
+        font-size: 1.2rem;
+    }
+    
+    .valor p {
+        font-size: 0.9rem;
     }
 }

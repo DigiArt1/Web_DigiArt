@@ -145,8 +145,17 @@ body {
 
 /* Media queries para responsive */
 @media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
   .hamburger {
     display: block;
+    z-index: 1001;
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -170,7 +179,7 @@ body {
     left: -100%;
     top: 0;
     height: 100vh;
-    width: 300px;
+    width: 280px;
     gap: 0;
     flex-direction: column;
     background-color: white;
@@ -179,6 +188,7 @@ body {
     box-shadow: 2px 0 15px rgba(0,0,0,0.1);
     padding: 0;
     overflow-y: auto;
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -192,9 +202,9 @@ body {
 
   .nav-link {
     display: block;
-    padding: 1.5rem 2.5rem;
+    padding: 1.3rem 2rem;
     border-bottom: 1px solid #f0f0f0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 500;
     transition: all 0.3s ease;
     color: var(--color-negro) !important;
@@ -204,7 +214,7 @@ body {
 
   .nav-link:hover {
     background-color: #f8f9fa !important;
-    padding-left: 3rem;
+    padding-left: 2.5rem;
     color: var(--color-primario) !important;
   }
 
@@ -218,20 +228,20 @@ body {
 
   .nav-btn-container {
     text-align: center;
-    padding: 2rem 0;
-    margin-top: 1rem;
+    padding: 1.5rem 0;
+    margin-top: 0.5rem;
     border-top: 1px solid #f0f0f0;
   }
 
   .nav-btn {
     background: var(--color-primario);
-    color: white;
+    color: white !important;
     display: inline-block;
     text-align: center;
     border-radius: 30px;
-    padding: 1rem 2rem;
+    padding: 0.9rem 1.8rem;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
   }
@@ -239,6 +249,46 @@ body {
   .nav-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    background: var(--color-secundario);
+    background: var(--color-secundario) !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 0.7rem 0.8rem;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav-menu {
+    width: 260px;
+  }
+
+  .mobile-logo {
+    padding: 2rem 1.5rem;
+  }
+
+  .mobile-logo img {
+    height: 75px;
+  }
+
+  .nav-link {
+    padding: 1.2rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .nav-link:hover {
+    padding-left: 2rem;
+  }
+
+  .nav-btn-container {
+    padding: 1.2rem 0;
+  }
+
+  .nav-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
   }
 }
