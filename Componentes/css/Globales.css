@@ -76,7 +76,7 @@ body {
 
 .nav-btn {
   background: var(--color-primario);
-  color: white;
+  color: white !important;
   padding: 0.8rem 1.5rem;
   border-radius: 30px;
   text-decoration: none;
@@ -86,6 +86,13 @@ body {
 
 .nav-btn:hover {
   background: var(--color-secundario);
+  color: white !important;
+}
+
+.nav-btn:visited,
+.nav-btn:focus,
+.nav-btn:active {
+  color: white !important;
 }
 
 .hamburger {
