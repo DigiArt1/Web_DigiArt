@@ -1,0 +1,951 @@
+/* Proyectos.css - Diseño con Menú y Tarjetas Visuales */
+
+/* Sección Hero */
+.hero-proyectos {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #2E3192 0%, #4648a3 30%, #ED2E8B 70%, #f15fa3 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-proyectos .contenedor {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenido-hero {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contenido-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.contenido-hero p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    opacity: 0.95;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Esferas decorativas del Hero */
+.esfera-hero-1 {
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+.esfera-hero-2 {
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.3) 0%, rgba(0, 167, 157, 0.15) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 15s ease-in-out infinite reverse;
+    z-index: 1;
+}
+
+/* Sección Proyectos */
+.seccion-proyectos {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-proyectos .contenedor {
+    position: relative;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-seccion-proyectos {
+    text-align: center;
+    color: var(--color-secundario);
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitulo-proyectos {
+    text-align: center;
+    color: #666;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+/* Menú de Categorías */
+.menu-categorias {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.categoria-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    background: white;
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categoria-btn i {
+    font-size: 1.2rem;
+}
+
+.categoria-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-primario);
+    color: var(--color-primario);
+}
+
+.categoria-btn.active {
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 6px 25px rgba(237, 46, 139, 0.3);
+}
+
+.categoria-btn.active:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(237, 46, 139, 0.4);
+}
+
+/* Contenedor de Proyectos */
+.proyectos-container {
+    position: relative;
+    min-height: 600px;
+}
+
+.categoria-proyectos {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.categoria-proyectos.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Grid de Proyectos - Estilo Catálogo */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 35px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Tarjeta de Proyecto - Estilo Catálogo */
+.proyecto-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.proyecto-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.proyecto-card:hover::before {
+    opacity: 1;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.proyecto-imagen {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.proyecto-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.proyecto-card:hover .proyecto-imagen img {
+    transform: scale(1.15);
+}
+
+.proyecto-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(46, 49, 146, 0.9) 0%, rgba(237, 46, 139, 0.9) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.proyecto-card:hover .proyecto-overlay {
+    opacity: 1;
+}
+
+.btn-demo {
+    background: white;
+    color: var(--color-primario);
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-demo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Información del Proyecto - Estilo Catálogo */
+.proyecto-info {
+    padding: 25px;
+}
+
+.proyecto-cliente {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(237, 46, 139, 0.1) 0%, rgba(46, 49, 146, 0.1) 100%);
+    color: var(--color-primario);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.proyecto-info h3 {
+    color: var(--color-secundario);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.proyecto-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+}
+
+.proyecto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: white;
+    color: var(--color-secundario);
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border: 1.5px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.proyecto-card:hover .tag {
+    border-color: var(--color-primario);
+    background: linear-gradient(135deg, rgba(237, 46, 139, 0.05) 0%, rgba(46, 49, 146, 0.05) 100%);
+}
+
+.proyecto-botones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.btn-ver-demo {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: linear-gradient(135deg, var(--color-primario) 0%, var(--color-secundario) 100%);
+    color: white;
+    padding: 11px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(237, 46, 139, 0.25);
+    border: none;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.btn-ver-demo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(237, 46, 139, 0.35);
+}
+
+.btn-contactar {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: white;
+    color: #25D366;
+    padding: 11px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    border: 2px solid #25D366;
+    min-width: 120px;
+}
+
+.btn-contactar:hover {
+    background: #25D366;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+}
+
+.btn-ver-demo i,
+.btn-contactar i {
+    font-size: 0.95rem;
+}
+
+/* CTA de Servicios */
+.cta-proyectos {
+    text-align: center;
+    margin-top: 80px;
+    padding: 50px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-proyectos h3 {
+    color: var(--color-secundario);
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cta-proyectos p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.btn-cta-proyectos {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-cta-proyectos:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-cta-proyectos i {
+    font-size: 1.3rem;
+}
+
+/* Esferas decorativas */
+.esfera-proyectos-1 {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(237, 46, 139, 0.2) 0%, rgba(237, 46, 139, 0.1) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarLento 30s ease-in-out infinite;
+    z-index: 1;
+}
+
+.esfera-proyectos-2 {
+    position: absolute;
+    bottom: 20%;
+    left: 8%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, rgba(0, 167, 157, 0.25) 0%, rgba(0, 167, 157, 0.12) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarMedio 25s ease-in-out infinite reverse;
+    z-index: 1;
+}
+
+.esfera-proyectos-3 {
+    position: absolute;
+    top: 60%;
+    right: 25%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.3) 0%, rgba(255, 215, 0, 0.15) 50%, transparent 100%);
+    border-radius: 50%;
+    animation: flotarRapido 20s ease-in-out infinite;
+    z-index: 1;
+}
+
+/* Animaciones */
+@keyframes flotarLento {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(30px, -20px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-20px, -40px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-40px, 20px) rotate(270deg);
+    }
+}
+
+@keyframes flotarMedio {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    33% {
+        transform: translate(40px, -30px) rotate(120deg);
+    }
+    66% {
+        transform: translate(-30px, -50px) rotate(240deg);
+    }
+}
+
+@keyframes flotarRapido {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    20% {
+        transform: translate(25px, -15px) rotate(72deg);
+    }
+    40% {
+        transform: translate(-15px, -35px) rotate(144deg);
+    }
+    60% {
+        transform: translate(-35px, 10px) rotate(216deg);
+    }
+    80% {
+        transform: translate(20px, 25px) rotate(288deg);
+    }
+}
+
+/* Footer */
+.footer {
+    background: #1a1a2e;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.contenido-footer {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo-footer img {
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.logo-footer p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+.links-footer h4,
+.servicios-footer h4 {
+    color: var(--color-primario);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.links-footer ul,
+.servicios-footer ul {
+    list-style: none;
+}
+
+.links-footer li,
+.servicios-footer li {
+    margin-bottom: 10px;
+}
+
+.links-footer a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links-footer a:hover {
+    color: var(--color-primario);
+}
+
+.servicios-footer li {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.derechos-footer {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.nav-link.active {
+    color: var(--color-primario) !important;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-primario);
+    border-radius: 1px;
+}
+
+.nav-btn {
+    color: white !important;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .contenido-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero-proyectos {
+        padding: 100px 0 60px;
+        min-height: 50vh;
+    }
+    
+    .hero-proyectos .contenedor {
+        padding: 0 15px;
+    }
+    
+    .contenido-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .contenido-hero p {
+        font-size: 1rem;
+    }
+    
+    .seccion-proyectos {
+        padding: 60px 0;
+    }
+    
+    .seccion-proyectos .contenedor {
+        padding: 0 15px;
+    }
+    
+    .titulo-seccion-proyectos {
+        font-size: 2rem;
+    }
+    
+    .subtitulo-proyectos {
+        font-size: 1rem;
+        margin-bottom: 35px;
+    }
+    
+    .menu-categorias {
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .categoria-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .categoria-btn span {
+        display: none;
+    }
+    
+    .categoria-btn i {
+        font-size: 1.3rem;
+    }
+    
+    .proyectos-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .proyecto-imagen {
+        height: 240px;
+    }
+    
+    .proyecto-info {
+        padding: 25px;
+    }
+    
+    .proyecto-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-proyectos {
+        margin-top: 50px;
+        padding: 35px 20px;
+    }
+    
+    .cta-proyectos h3 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-proyectos p {
+        font-size: 1rem;
+    }
+    
+    .btn-cta-proyectos {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+    
+    .contenido-footer {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .esfera-hero-2,
+    .esfera-proyectos-2,
+    .esfera-proyectos-3 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenido-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .contenido-hero p {
+        font-size: 0.95rem;
+    }
+    
+    .titulo-seccion-proyectos {
+        font-size: 1.7rem;
+    }
+    
+    .categoria-btn {
+        padding: 10px 15px;
+    }
+    
+    .categoria-btn i {
+        font-size: 1.2rem;
+    }
+    
+    .proyecto-imagen {
+        height: 220px;
+    }
+    
+    .proyecto-info {
+        padding: 20px;
+    }
+    
+    .proyecto-cliente {
+        font-size: 0.7rem;
+        padding: 3px 10px;
+    }
+    
+    .proyecto-info h3 {
+        font-size: 1.15rem;
+    }
+    
+    .proyecto-info p {
+        font-size: 0.85rem;
+    }
+    
+    .proyecto-tags {
+        gap: 5px;
+    }
+    
+    .tag {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .proyecto-botones {
+        gap: 6px;
+    }
+    
+    .btn-contactar,
+    .btn-ver-demo {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        min-width: 110px;
+    }
+    
+    .btn-demo {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+    }
+    
+    .cta-proyectos h3 {
+        font-size: 1.3rem;
+    }
+    
+    .cta-proyectos p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Sección de Clientes */
+.seccion-clientes {
+    padding: 80px 0;
+    background: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-clientes .contenedor {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-clientes {
+    text-align: center;
+    color: var(--color-secundario);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.subtitulo-clientes {
+    text-align: center;
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Carrusel de Clientes */
+.carrusel-clientes {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.carrusel-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.carrusel-track:hover {
+    animation-play-state: paused;
+}
+
+.cliente-logo {
+    flex-shrink: 0;
+    width: 200px;
+    height: 120px;
+    margin: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    padding: 20px;
+}
+
+.cliente-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.cliente-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.cliente-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Gradientes laterales para efecto fade */
+.carrusel-clientes::before,
+.carrusel-clientes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.carrusel-clientes::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.carrusel-clientes::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
+
+/* Sección de Clientes en Servicios */
+.seccion-clientes-proyectos {
+    margin: 80px 0;
+    padding: 60px 0;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.titulo-clientes-small {
+    text-align: center;
+    color: var(--color-secundario);
+    font-size: 2rem;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Responsive para carrusel en servicios */
+@media screen and (max-width: 768px) {
+    .seccion-clientes-proyectos {
+        margin: 50px 0;
+        padding: 40px 0;
+    }
+    
+    .titulo-clientes-small {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+}
+

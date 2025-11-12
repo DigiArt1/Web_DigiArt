@@ -1,119 +1,33 @@
-// Servicios.js - Con carga desde JSON
-
-let serviciosData = null;
+// servicios.js
 
 document.addEventListener('DOMContentLoaded', function () {
-    cargarServicios();
+    // Inicializar todas las funcionalidades
+    initAnimaciones();
+    initserviciosCards();
     setActiveNavLink();
 });
 
+// Función para marcar el enlace activo en el menú
 function setActiveNavLink() {
+    // Buscar todos los enlaces del menú
     const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Remover la clase active de todos los enlaces
     navLinks.forEach(link => {
         link.classList.remove('active');
     });
+    
+    // Buscar el enlace de "servicios" y marcarlo como activo
     navLinks.forEach(link => {
-        if (link.textContent.trim() === 'Servicios') {
+        if (link.textContent.trim() === 'servicios') {
             link.classList.add('active');
         }
     });
 }
 
-async function cargarServicios() {
-    try {
-        const response = await fetch('../data/servicios.json');
-        serviciosData = await response.json();
-        
-        renderizarMenuCategorias();
-        renderizarProyectos();
-        initAnimaciones();
-        initMenuCategorias();
-        initProyectoCards();
-    } catch (error) {
-        console.error('Error cargando servicios:', error);
-    }
-}
-
-function renderizarMenuCategorias() {
-    const menuContainer = document.querySelector('.menu-categorias');
-    if (!menuContainer || !serviciosData) return;
-
-    menuContainer.innerHTML = '';
-    
-    Object.keys(serviciosData.categorias).forEach((key, index) => {
-        const categoria = serviciosData.categorias[key];
-        const btn = document.createElement('button');
-        btn.className = `categoria-btn ${index === 0 ? 'active' : ''}`;
-        btn.setAttribute('data-categoria', key);
-        btn.innerHTML = `
-            <i class="fas ${categoria.icono}"></i>
-            <span>${categoria.nombre}</span>
-        `;
-        menuContainer.appendChild(btn);
-    });
-}
-
-function renderizarProyectos() {
-    const proyectosContainer = document.querySelector('.proyectos-container');
-    if (!proyectosContainer || !serviciosData) return;
-
-    proyectosContainer.innerHTML = '';
-
-    Object.keys(serviciosData.categorias).forEach((key, index) => {
-        const categoria = serviciosData.categorias[key];
-        const categoriaDiv = document.createElement('div');
-        categoriaDiv.className = `categoria-proyectos ${index === 0 ? 'active' : ''}`;
-        categoriaDiv.id = key;
-
-        const gridDiv = document.createElement('div');
-        gridDiv.className = 'proyectos-grid';
-
-        categoria.proyectos.forEach(proyecto => {
-            const card = crearTarjetaProyecto(proyecto);
-            gridDiv.appendChild(card);
-        });
-
-        categoriaDiv.appendChild(gridDiv);
-        proyectosContainer.appendChild(categoriaDiv);
-    });
-}
-
-function crearTarjetaProyecto(proyecto) {
-    const card = document.createElement('div');
-    card.className = 'proyecto-card';
-    
-    card.innerHTML = `
-        <div class="proyecto-imagen">
-            <img src="${proyecto.imagen}" alt="${proyecto.titulo}" loading="lazy">
-            <div class="proyecto-overlay">
-                <button class="btn-demo" data-demo="${proyecto.demoUrl}">
-                    <i class="fas fa-play"></i> Ver Proyecto
-                </button>
-            </div>
-        </div>
-        <div class="proyecto-info">
-            <span class="proyecto-cliente">${proyecto.cliente}</span>
-            <h3>${proyecto.titulo}</h3>
-            <p>${proyecto.descripcion}</p>
-            <div class="proyecto-tags">
-                ${proyecto.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-            </div>
-            <div class="proyecto-botones">
-                <button class="btn-ver-demo" data-demo="${proyecto.demoUrl}">
-                    <i class="fas fa-eye"></i> Ver Proyecto
-                </button>
-                <a href="https://wa.me/573024834380?text=Hola,%20me%20interesa%20un%20proyecto%20similar%20a:%20${encodeURIComponent(proyecto.titulo)}" 
-                   target="_blank" class="btn-contactar">
-                    <i class="fab fa-whatsapp"></i> Consultar
-                </a>
-            </div>
-        </div>
-    `;
-    
-    return card;
-}
-
+// Animaciones de entrada
 function initAnimaciones() {
+    // Animación del hero
     const heroContent = document.querySelector('.contenido-hero');
     if (heroContent) {
         heroContent.style.opacity = '0';
@@ -126,94 +40,167 @@ function initAnimaciones() {
         }, 300);
     }
 
-    const menuBtns = document.querySelectorAll('.categoria-btn');
-    menuBtns.forEach((btn, index) => {
-        btn.style.opacity = '0';
-        btn.style.transform = 'translateY(20px)';
+    // Animación de las tarjetas de servicios
+    const servicioCards = document.querySelectorAll('.servicio-card');
+    servicioCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
 
         setTimeout(() => {
-            btn.style.transition = 'all 0.5s ease';
-            btn.style.opacity = '1';
-            btn.style.transform = 'translateY(0)';
+            card.style.transition = 'all 0.6s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
         }, 200 * (index + 1));
     });
 }
 
-function initMenuCategorias() {
-    const categoriaBtns = document.querySelectorAll('.categoria-btn');
-    const categoriaProyectos = document.querySelectorAll('.categoria-proyectos');
+// Funcionalidad de las tarjetas de servicios
+function initserviciosCards() {
+    const servicioCards = document.querySelectorAll('.servicio-card');
 
-    categoriaBtns.forEach(btn => {
-        btn.addEventListener('click', function () {
-            const categoria = this.getAttribute('data-categoria');
-
-            categoriaBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-
-            categoriaProyectos.forEach(cat => {
-                cat.classList.remove('active');
-            });
-
-            const categoriaActiva = document.getElementById(categoria);
-            if (categoriaActiva) {
-                categoriaActiva.classList.add('active');
-
-                const proyectoCards = categoriaActiva.querySelectorAll('.proyecto-card');
-                proyectoCards.forEach((card, index) => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(30px)';
-
-                    setTimeout(() => {
-                        card.style.transition = 'all 0.5s ease';
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100 * (index + 1));
-                });
-            }
-        });
-    });
-}
-
-function initProyectoCards() {
-    document.addEventListener('click', function(e) {
-        if (e.target.closest('.btn-demo') || e.target.closest('.btn-ver-demo')) {
-            const btn = e.target.closest('.btn-demo') || e.target.closest('.btn-ver-demo');
-            const demoUrl = btn.getAttribute('data-demo');
-            const proyectoNombre = btn.closest('.proyecto-card').querySelector('h3').textContent;
-            
-            if (demoUrl && demoUrl !== '#') {
-                mostrarNotificacion(`Abriendo proyecto: ${proyectoNombre}...`);
-                setTimeout(() => {
-                    window.open(demoUrl, '_blank');
-                }, 1000);
-            } else {
-                mostrarNotificacion(`Proyecto: ${proyectoNombre} - Contáctanos para más información`);
-            }
-        }
-    });
-
-    const proyectoCards = document.querySelectorAll('.proyecto-card');
-    proyectoCards.forEach(card => {
+    servicioCards.forEach(card => {
+        // Efectos de hover mejorados
         card.addEventListener('mouseenter', function () {
+            // Efecto de elevación
             this.style.transform = 'translateY(-15px)';
+            this.style.boxShadow = '0 25px 60px rgba(0, 0, 0, 0.2)';
         });
 
         card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.1)';
+        });
+
+        // Animación de las características
+        const caracteristicas = card.querySelectorAll('.caracteristica');
+        caracteristicas.forEach((caracteristica, index) => {
+            caracteristica.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateX(10px)';
+                this.style.background = '#e9ecef';
+            });
+
+            caracteristica.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateX(0)';
+                this.style.background = '#f8f9fa';
+            });
+        });
+
+        // Efectos en los botones
+        const botones = card.querySelectorAll('.btn-servicio');
+        botones.forEach(boton => {
+            boton.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-3px)';
+            });
+
+            boton.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+            });
+
+            // Efecto de click
+            boton.addEventListener('click', function (e) {
+                // Crear efecto de ondas
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+
+                // Mostrar notificación
+                const servicioNombre = this.closest('.servicio-card').querySelector('h3').textContent;
+                const accion = this.textContent.includes('Demo') || this.textContent.includes('Probar') ? 'demo' : 'compra';
+                mostrarNotificacion(servicioNombre, accion);
+            });
+        });
+
+        // Efectos en las opciones de precio
+        const precioOpciones = card.querySelectorAll('.precio-opcion');
+        precioOpciones.forEach(opcion => {
+            opcion.addEventListener('mouseenter', function () {
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 15px 35px rgba(0, 0, 0, 0.15)';
+            });
+
+            opcion.addEventListener('mouseleave', function () {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
         });
     });
+
+    // Agregar estilos para el efecto ripple
+    const style = document.createElement('style');
+    style.textContent = `
+        .btn-servicio {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: ripple-animation 0.6s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .servicio-card:hover .caracteristica {
+            animation: slideInLeft 0.3s ease forwards;
+        }
+        
+        .servicio-card:hover .caracteristica:nth-child(1) { animation-delay: 0.1s; }
+        .servicio-card:hover .caracteristica:nth-child(2) { animation-delay: 0.2s; }
+        .servicio-card:hover .caracteristica:nth-child(3) { animation-delay: 0.3s; }
+        .servicio-card:hover .caracteristica:nth-child(4) { animation-delay: 0.4s; }
+        
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-10px);
+                opacity: 0.7;
+            }
+            to {
+                transform: translateX(5px);
+                opacity: 1;
+            }
+        }
+    `;
+    document.head.appendChild(style);
 }
 
-function mostrarNotificacion(mensaje) {
+// Mostrar notificación
+function mostrarNotificacion(servicioNombre, accion) {
+    const mensaje = accion === 'demo' 
+        ? `Redirigiendo a WhatsApp para solicitar demo de ${servicioNombre}...`
+        : `Redirigiendo a WhatsApp para comprar ${servicioNombre}...`;
+
     const notification = document.createElement('div');
-    notification.className = 'notification-whatsapp';
+    notification.className = 'whatsapp-notification';
     notification.innerHTML = `
         <div class="notification-content">
-            <i class="fas fa-check-circle"></i>
+            <i class="fab fa-whatsapp"></i>
             <span>${mensaje}</span>
         </div>
     `;
 
+    // Estilos de la notificación
     notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -227,6 +214,7 @@ function mostrarNotificacion(mensaje) {
         opacity: 0;
         transform: translateX(100%);
         transition: all 0.3s ease;
+        max-width: 400px;
     `;
 
     const notificationContent = notification.querySelector('.notification-content');
@@ -239,11 +227,13 @@ function mostrarNotificacion(mensaje) {
 
     document.body.appendChild(notification);
 
+    // Animar entrada
     setTimeout(() => {
         notification.style.opacity = '1';
         notification.style.transform = 'translateX(0)';
     }, 100);
 
+    // Remover después de 3 segundos
     setTimeout(() => {
         notification.style.opacity = '0';
         notification.style.transform = 'translateX(100%)';
@@ -255,6 +245,7 @@ function mostrarNotificacion(mensaje) {
     }, 3000);
 }
 
+// Efecto parallax suave para las esferas
 function initParallax() {
     const esferas = document.querySelectorAll('[class*="esfera-"]');
 
@@ -269,6 +260,7 @@ function initParallax() {
     });
 }
 
+// Smooth scroll para navegación
 function initSmoothScroll() {
     const links = document.querySelectorAll('a[href^="#"]');
 
@@ -289,11 +281,15 @@ function initSmoothScroll() {
     });
 }
 
+// Inicializar parallax y smooth scroll
 document.addEventListener('DOMContentLoaded', function () {
     initParallax();
     initSmoothScroll();
 });
 
+// Efecto de typing removido - ahora el texto aparece directamente
+
+// Optimización de rendimiento
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -306,6 +302,7 @@ function debounce(func, wait) {
     };
 }
 
+// Aplicar debounce al scroll
 window.addEventListener('scroll', debounce(() => {
-    // Funciones de scroll optimizadas
-}, 16));
+    // Funciones de scroll optimizadas aquí
+}, 16)); // ~60fps

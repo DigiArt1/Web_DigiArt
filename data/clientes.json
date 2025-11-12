@@ -2,51 +2,63 @@
   "clientes": [
     {
       "id": 1,
-      "nombre": "Empresa Tech Solutions",
-      "logo": "Galeria/img/clientes/cliente1.png",
+      "nombre": "Cliente 1",
+      "logo": "Galeria/img/logo1.jpg",
       "categoria": "Tecnología"
     },
     {
       "id": 2,
-      "nombre": "Restaurante El Sabor",
-      "logo": "Galeria/img/clientes/cliente2.png",
-      "categoria": "Gastronomía"
+      "nombre": "Cliente 2",
+      "logo": "Galeria/img/logo2.jpeg",
+      "categoria": "Servicios"
     },
     {
       "id": 3,
-      "nombre": "Boutique Fashion",
-      "logo": "Galeria/img/clientes/cliente3.png",
-      "categoria": "Moda"
+      "nombre": "Cliente 3",
+      "logo": "Galeria/img/logo3.jpeg",
+      "categoria": "Comercio"
     },
     {
       "id": 4,
-      "nombre": "Gym Fitness Pro",
-      "logo": "Galeria/img/clientes/cliente4.png",
-      "categoria": "Deportes"
+      "nombre": "Cliente 4",
+      "logo": "Galeria/img/logo4.jpeg",
+      "categoria": "Industria"
     },
     {
       "id": 5,
-      "nombre": "Clínica Salud Total",
-      "logo": "Galeria/img/clientes/cliente5.png",
+      "nombre": "Cliente 5",
+      "logo": "Galeria/img/logo5.jpeg",
       "categoria": "Salud"
     },
     {
       "id": 6,
-      "nombre": "Constructora Edificar",
-      "logo": "Galeria/img/clientes/cliente6.png",
-      "categoria": "Construcción"
+      "nombre": "Cliente 6",
+      "logo": "Galeria/img/logo6.jpeg",
+      "categoria": "Educación"
     },
     {
       "id": 7,
-      "nombre": "Café Aroma",
-      "logo": "Galeria/img/clientes/cliente7.png",
+      "nombre": "Cliente 7",
+      "logo": "Galeria/img/logo7.jpeg",
       "categoria": "Gastronomía"
     },
     {
       "id": 8,
-      "nombre": "Academia Educativa",
-      "logo": "Galeria/img/clientes/cliente8.png",
-      "categoria": "Educación"
+      "nombre": "Cliente 8",
+      "logo": "Galeria/img/logo8.jpeg",
+      "categoria": "Deportes"
+    },
+    {
+      "id": 9,
+      "nombre": "Cliente 9",
+      "logo": "Galeria/img/logo9.jpeg",
+      "categoria": "Entretenimiento"
+    },
+    {
+      "id": 10,
+      "nombre": "Cliente 10",
+      "logo": "Galeria/img/logo10.jpeg",
+      "categoria": "Construcción"
     }
   ]
 }

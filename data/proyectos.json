@@ -1,0 +1,340 @@
+{
+  "categorias": {
+    "audiovisual": {
+      "nombre": "Producción Audiovisual",
+      "icono": "fa-video",
+      "proyectos": [
+        {
+          "id": 1,
+          "titulo": "Video Corporativo - Tech Solutions",
+          "cliente": "Tech Solutions Inc.",
+          "descripcion": "Video institucional 4K con tomas aéreas y entrevistas",
+          "imagen": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=600&h=400&fit=crop",
+          "tags": [
+            "4K",
+            "Drone",
+            "Corporativo"
+          ],
+          "demoUrl": "https://www.youtube.com/watch?v=demo1"
+        },
+        {
+          "id": 2,
+          "titulo": "Spot Publicitario - Fashion Brand",
+          "cliente": "Fashion Brand",
+          "descripcion": "Comercial de 30 segundos para campaña digital",
+          "imagen": "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=400&fit=crop",
+          "tags": [
+            "30s",
+            "Comercial",
+            "Moda"
+          ],
+          "demoUrl": "https://www.youtube.com/watch?v=demo2"
+        },
+        {
+          "id": 3,
+          "titulo": "Contenido Redes - Café Aroma",
+          "cliente": "Café Aroma",
+          "descripcion": "Serie de reels y stories para Instagram",
+          "imagen": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop",
+          "tags": [
+            "Reels",
+            "Stories",
+            "Instagram"
+          ],
+          "demoUrl": "https://www.youtube.com/watch?v=demo3"
+        },
+        {
+          "id": 4,
+          "titulo": "Animación 3D - Producto Tech",
+          "cliente": "Tech Innovations",
+          "descripcion": "Animación 3D de producto para lanzamiento",
+          "imagen": "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop",
+          "tags": [
+            "3D",
+            "Motion Graphics",
+            "Producto"
+          ],
+          "demoUrl": "https://www.youtube.com/watch?v=demo4"
+        },
+        {
+          "id": 5,
+          "titulo": "Documental Corporativo",
+          "cliente": "Constructora Edificar",
+          "descripcion": "Documental sobre proceso de construcción",
+          "imagen": "https://images.unsplash.com/photo-1536240478700-b869070f9279?w=600&h=400&fit=crop",
+          "tags": [
+            "Documental",
+            "Corporativo",
+            "Timelapse"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 6,
+          "titulo": "Video Testimonial",
+          "cliente": "Clínica Salud Total",
+          "descripcion": "Serie de testimonios de pacientes satisfechos",
+          "imagen": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=400&fit=crop",
+          "tags": [
+            "Testimonial",
+            "Salud",
+            "Emocional"
+          ],
+          "demoUrl": "#"
+        }
+      ]
+    },
+    "branding": {
+      "nombre": "Branding & Diseño",
+      "icono": "fa-palette",
+      "proyectos": [
+        {
+          "id": 7,
+          "titulo": "Identidad Corporativa - Startup Tech",
+          "cliente": "Startup Tech",
+          "descripcion": "Logo, manual de marca y papelería completa",
+          "imagen": "https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&h=400&fit=crop",
+          "tags": [
+            "Logo",
+            "Manual",
+            "Papelería"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 8,
+          "titulo": "Rediseño de Marca - Restaurante",
+          "cliente": "Restaurante El Sabor",
+          "descripcion": "Renovación completa de identidad visual",
+          "imagen": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop",
+          "tags": [
+            "Rediseño",
+            "Gastronomía",
+            "Branding"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 9,
+          "titulo": "Packaging Premium - Cosmética",
+          "cliente": "Beauty Line",
+          "descripcion": "Diseño de empaque para línea de productos",
+          "imagen": "https://images.unsplash.com/photo-1607082349566-187342175e2f?w=600&h=400&fit=crop",
+          "tags": [
+            "Packaging",
+            "Cosmética",
+            "Premium"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 10,
+          "titulo": "Catálogo Digital - Moda",
+          "cliente": "Boutique Fashion",
+          "descripcion": "Catálogo interactivo para colección 2024",
+          "imagen": "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&h=400&fit=crop",
+          "tags": [
+            "Catálogo",
+            "Moda",
+            "Digital"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 11,
+          "titulo": "Branding Deportivo",
+          "cliente": "Gym Fitness Pro",
+          "descripcion": "Identidad visual para cadena de gimnasios",
+          "imagen": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+          "tags": [
+            "Deportes",
+            "Fitness",
+            "Energético"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 12,
+          "titulo": "Diseño Editorial",
+          "cliente": "Academia Educativa",
+          "descripcion": "Diseño de revista institucional trimestral",
+          "imagen": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+          "tags": [
+            "Editorial",
+            "Revista",
+            "Educación"
+          ],
+          "demoUrl": "#"
+        }
+      ]
+    },
+    "websites": {
+      "nombre": "Desarrollo Web",
+      "icono": "fa-laptop-code",
+      "proyectos": [
+        {
+          "id": 13,
+          "titulo": "E-commerce - Tienda de Moda",
+          "cliente": "Fashion Store",
+          "descripcion": "Tienda online con pasarela de pagos integrada",
+          "imagen": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+          "tags": [
+            "E-commerce",
+            "Shopify",
+            "Responsive"
+          ],
+          "demoUrl": "https://demo-ecommerce.com"
+        },
+        {
+          "id": 14,
+          "titulo": "Landing Page - Evento Tech",
+          "cliente": "Tech Conference 2024",
+          "descripcion": "Página de aterrizaje para evento tecnológico",
+          "imagen": "https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&h=400&fit=crop",
+          "tags": [
+            "Landing",
+            "Evento",
+            "Conversión"
+          ],
+          "demoUrl": "https://demo-landing.com"
+        },
+        {
+          "id": 15,
+          "titulo": "Sitio Corporativo - Constructora",
+          "cliente": "Constructora Edificar",
+          "descripcion": "Web institucional con portafolio de proyectos",
+          "imagen": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+          "tags": [
+            "Corporativo",
+            "WordPress",
+            "Portafolio"
+          ],
+          "demoUrl": "https://demo-corporate.com"
+        },
+        {
+          "id": 16,
+          "titulo": "Portal de Noticias",
+          "cliente": "Medio Digital",
+          "descripcion": "Plataforma de noticias con CMS personalizado",
+          "imagen": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&h=400&fit=crop",
+          "tags": [
+            "Portal",
+            "CMS",
+            "Noticias"
+          ],
+          "demoUrl": "https://demo-blog.com"
+        },
+        {
+          "id": 17,
+          "titulo": "App Web - Reservas",
+          "cliente": "Restaurante Premium",
+          "descripcion": "Sistema de reservas online en tiempo real",
+          "imagen": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+          "tags": [
+            "Web App",
+            "Reservas",
+            "Real-time"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 18,
+          "titulo": "Plataforma E-learning",
+          "cliente": "Academia Online",
+          "descripcion": "Plataforma educativa con cursos y certificados",
+          "imagen": "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop",
+          "tags": [
+            "E-learning",
+            "Educación",
+            "LMS"
+          ],
+          "demoUrl": "#"
+        }
+      ]
+    },
+    "redes": {
+      "nombre": "Redes Sociales",
+      "icono": "fa-share-alt",
+      "proyectos": [
+        {
+          "id": 19,
+          "titulo": "Campaña Instagram - Moda",
+          "cliente": "Fashion Brand",
+          "descripcion": "Gestión completa de Instagram con 50K+ seguidores",
+          "imagen": "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&h=400&fit=crop",
+          "tags": [
+            "Instagram",
+            "Moda",
+            "Engagement"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 20,
+          "titulo": "Contenido TikTok - Gastronomía",
+          "cliente": "Café Aroma",
+          "descripcion": "Videos virales que generaron 2M+ vistas",
+          "imagen": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+          "tags": [
+            "TikTok",
+            "Viral",
+            "Gastronomía"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 21,
+          "titulo": "Ads Facebook - E-commerce",
+          "cliente": "Tienda Online",
+          "descripcion": "Campaña publicitaria con ROI del 400%",
+          "imagen": "https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&h=400&fit=crop",
+          "tags": [
+            "Facebook Ads",
+            "ROI",
+            "E-commerce"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 22,
+          "titulo": "Community Management - Tech",
+          "cliente": "Startup Tech",
+          "descripcion": "Crecimiento de 0 a 30K seguidores en 6 meses",
+          "imagen": "https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&h=400&fit=crop",
+          "tags": [
+            "Community",
+            "Growth",
+            "Tech"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 23,
+          "titulo": "Estrategia LinkedIn - B2B",
+          "cliente": "Empresa Corporativa",
+          "descripcion": "Posicionamiento como líder de opinión",
+          "imagen": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600&h=400&fit=crop",
+          "tags": [
+            "LinkedIn",
+            "B2B",
+            "Corporativo"
+          ],
+          "demoUrl": "#"
+        },
+        {
+          "id": 24,
+          "titulo": "Influencer Marketing",
+          "cliente": "Marca de Belleza",
+          "descripcion": "Campaña con micro-influencers locales",
+          "imagen": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=600&h=400&fit=crop",
+          "tags": [
+            "Influencers",
+            "Belleza",
+            "Campaña"
+          ],
+          "demoUrl": "#"
+        }
+      ]
+    }
+  }
+}
